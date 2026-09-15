@@ -7,22 +7,22 @@
       name="description"
       content="Portfolio of Jade Philline Monforte, a video editor, director, and graphic designer based in Bayugan City, Philippines."
     />
-    <meta name="theme-color" content="#07131c" />
+    <meta name="theme-color" content="#070b17" />
     <title>Jade Philline Monforte | Video Editor &amp; Visual Storyteller</title>
-    <link
-      rel="icon"
-      type="image/svg+xml"
-      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%2307131c'/%3E%3Cpath d='M14 14h36v36H14z' fill='none' stroke='%23ff5a3c' stroke-width='4'/%3E%3Cpath d='M24 20v20c0 5-3 8-8 8' fill='none' stroke='%23f4f1eb' stroke-width='5' stroke-linecap='round'/%3E%3Cpath d='M33 43V21l7 13 7-13v22' fill='none' stroke='%23ff5a3c' stroke-width='4' stroke-linejoin='round'/%3E%3C/svg%3E"
-    />
-    <link rel="stylesheet" href="styles.css" />
-    <script src="script.js" defer></script>
+    <link rel="icon" type="image/svg+xml" href="assets/jp-monogram.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;650;700;750;800&display=swap" rel="stylesheet" />
+    <link rel="canonical" href="https://jadephillineportfolio.github.io/" />
+    <link rel="stylesheet" href="styles.css?rev=20260915-final" />
+    <script src="script.js?rev=20260915-final" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to work</a>
 
     <header class="site-header" data-header>
       <a class="brand" href="#top" aria-label="Jade Philline Monforte, home">
-        <span class="brand-mark">JP</span>
+        <img class="brand-mark" src="assets/jp-monogram.svg" alt="" width="42" height="42" />
         <span class="brand-name">Jade Philline</span>
       </a>
 
@@ -32,56 +32,50 @@
       </button>
 
       <nav class="site-nav" id="site-nav" aria-label="Main navigation">
-        <a href="#video">Video</a>
+        <a href="#video">Selected work</a>
         <a href="#design">Design</a>
-        <a href="#featured-project">Featured Project</a>
+        <a href="#featured-project">Anna Alone</a>
         <a href="#about">About</a>
-        <a class="nav-cta" href="mailto:jadephillineofficial@gmail.com?subject=Project%20inquiry%20for%20Jade">Let&rsquo;s work</a>
+        <a class="nav-cta" href="#contact">Let&rsquo;s talk <span aria-hidden="true">↗</span></a>
       </nav>
     </header>
 
     <main id="main">
-      <section class="hero" id="top">
+      <section class="hero" id="top" aria-labelledby="hero-name">
+        <div class="hero-light" aria-hidden="true"></div>
         <div class="hero-grid section-shell">
           <div class="hero-copy" data-reveal>
-            <p class="eyebrow"><span>01</span> Video &bull; Film &bull; Design &bull; Photography</p>
-            <p class="location-chip"><span aria-hidden="true"></span> Bayugan City, Philippines <em>Available remotely</em></p>
-            <h1><span>Jade</span><em>Philline</em><span class="family-name">Monforte</span></h1>
-            <p class="hero-intro">
-              A video editor, director, cinematographer, and visual designer creating clean,
-              story-driven work with intentional pacing and a cinematic eye.
-            </p>
+            <p class="eyebrow">Independent creative · Philippines</p>
+            <h1 id="hero-name">Jade Philline<span>Monforte<span class="name-period">.</span></span></h1>
+            <p class="hero-profession">Video editor &amp; visual storyteller</p>
+            <p class="hero-intro">I turn ideas into films, edits, and images that make you feel something. From the first concept to the final frame.</p>
             <div class="hero-actions">
-              <a class="button button-primary" href="#video">View selected work</a>
-              <a class="button button-quiet" href="mailto:jadephillineofficial@gmail.com?subject=Project%20inquiry%20for%20Jade">Start a project <span aria-hidden="true">&nearr;</span></a>
+              <a class="button button-primary" href="#video">Explore my work <span aria-hidden="true">↗</span></a>
+              <a class="button button-quiet" href="#contact">Let&rsquo;s create together <span aria-hidden="true">→</span></a>
             </div>
+            <div class="hero-details"><span>Bayugan City, Philippines</span><span>Open to remote projects</span></div>
           </div>
-
-          <div class="portrait-stage" data-reveal>
-            <p class="frame-label">JPM &bull; PORTFOLIO 2026</p>
-            <p class="hero-timecode" aria-hidden="true">00:00:24</p>
-            <div class="portrait-panel"></div>
-            <figure class="hero-photo hero-photo-one" aria-hidden="true"><img src="assets/jade-speaking.webp" alt="" decoding="async" /></figure>
-            <figure class="hero-photo hero-photo-two" aria-hidden="true"><img src="assets/jade-camera.webp" alt="" decoding="async" /></figure>
-            <figure class="hero-photo hero-photo-three" aria-hidden="true"><img src="assets/jade-stage.webp" alt="" decoding="async" /></figure>
-            <img class="portrait-main" src="assets/jade-hero.webp" alt="Jade Philline Monforte" fetchpriority="high" decoding="async" />
-          </div>
+          <figure class="portrait-stage" data-reveal>
+            <div class="portrait-orbit" aria-hidden="true"></div>
+            <div class="portrait-window">
+              <div class="portrait-heading"><span>Behind the frame</span><span aria-hidden="true">JP / 01</span></div>
+              <span class="portrait-word" aria-hidden="true">CREATE.</span>
+              <img class="portrait-main" src="assets/jade-hero.webp" alt="Jade Philline Monforte, video editor and filmmaker" width="1800" height="1088" fetchpriority="high" decoding="async" />
+              <div class="portrait-shade" aria-hidden="true"></div>
+              <figcaption><strong>Jade Philline</strong><span>Stories. Emotion. Intention.</span></figcaption>
+            </div>
+            <a class="portrait-badge" href="#about"><span class="badge-symbol" aria-hidden="true">✦</span><span>The person<br /><strong>behind the work</strong></span><span aria-hidden="true">↗</span></a>
+          </figure>
         </div>
-
-        <div class="hero-strip" aria-hidden="true">
-          <div>
-            <span>STORY-LED EDITING</span><i></i><span>FILM DIRECTION</span><i></i><span>GRAPHIC DESIGN</span><i></i><span>VISUAL STORYTELLING</span><i></i>
-            <span>STORY-LED EDITING</span><i></i><span>FILM DIRECTION</span><i></i><span>GRAPHIC DESIGN</span><i></i><span>VISUAL STORYTELLING</span><i></i>
-          </div>
-        </div>
+        <div class="hero-bottom section-shell"><p>EDITING <span>—</span> DIRECTION <span>—</span> CINEMATOGRAPHY <span>—</span> DESIGN</p><a href="#video">Scroll to discover <span aria-hidden="true">↓</span></a></div>
       </section>
 
       <section class="video-section" id="video">
         <div class="section-shell">
           <div class="section-heading" data-reveal>
             <p class="eyebrow"><span>02</span> Selected video work</p>
-            <h2>Stories shaped<br />one frame at a time.</h2>
-            <p>A curated mix of narrative films, trailers, and music videos.</p>
+            <h2>A few stories.<br /><span>A lasting feeling.</span></h2>
+            <p>Short films, music videos, and moments shaped with intention. Select a project to watch.</p>
           </div>
 
           <div class="project-grid">
@@ -117,6 +111,7 @@
                   <h3>The Wedding Dance</h3>
                 </div>
                 <p class="project-role project-role-full">Editor &bull; Director &bull; Writer &bull; Cinematographer / Videographer</p>
+                <p class="project-description">A couple’s love is tested when the pressure to have a child forces them to face a future apart.</p>
               </div>
             </a>
 
@@ -128,10 +123,11 @@
               </div>
               <div class="project-info">
                 <div>
-                  <p class="project-type">Short film &bull; 2024 &bull; 2:04</p>
+                  <p class="project-type">Short film &bull; 2:04</p>
                   <h3>Homework</h3>
                 </div>
                 <p class="project-role project-role-full">Editor &bull; Director &bull; Writer &bull; Cinematographer / Videographer</p>
+                <p class="project-description">As she tries to finish her homework, a young woman’s unspoken sadness seeps into the quiet rhythms of the night.</p>
               </div>
             </a>
 
@@ -147,6 +143,7 @@
                   <h3>Panalangin <span class="title-translation">(Prayer)</span></h3>
                 </div>
                 <p class="project-role project-role-full">Editor &bull; Director &bull; Writer &bull; Cinematographer / Videographer</p>
+                <p class="project-description">In the late 1990s, a college crush blooms through stolen glances and small moments, capturing the sweetness of first love.</p>
               </div>
             </a>
 
@@ -162,6 +159,7 @@
                   <h3>My Tears Ricochet</h3>
                 </div>
                 <p class="project-role project-role-full">Editor &bull; Director &bull; Writer &bull; Cinematographer / Videographer</p>
+                <p class="project-description">When infidelity fractures a relationship, love turns into grief and betrayal in a story woven to the song’s emotional rhythm.</p>
               </div>
             </a>
           </div>
@@ -194,7 +192,7 @@
         <div class="section-shell">
           <div class="section-heading design-heading" data-reveal>
             <p class="eyebrow"><span>03</span> Graphic design</p>
-            <h2>Visuals made<br />to communicate.</h2>
+            <h2>More than a<br /><span>pretty picture.</span></h2>
             <p>Publication materials, campaign graphics, and key art for university and film projects.</p>
           </div>
 
@@ -243,7 +241,7 @@
 
             <div class="case-study-overview" data-reveal>
               <p class="case-study-type">Theatre visual identity &bull; Character portraiture</p>
-              <h2 id="anna-alone-title"><span>Anna</span><em>Alone</em></h2>
+              <h2 id="anna-alone-title">Anna <span>Alone.</span></h2>
               <p class="case-study-lede">
                 A theatrical visual identity built around fractured memory, survival, and the different
                 voices carried within one person.
@@ -337,7 +335,7 @@
         <div class="section-shell about-grid">
           <div class="about-title" data-reveal>
             <p class="eyebrow"><span>05</span> About &amp; services</p>
-            <h2>Story first.<br />Details intentional.</h2>
+            <h2>The eye behind<br /><span>the edit.</span></h2>
           </div>
           <div class="about-copy" data-reveal>
             <p class="about-lede">
@@ -347,7 +345,7 @@
               publication design.
             </p>
             <p>
-              My specialty is storytelling that feels natural instead of over-edited. I focus on pacing,
+              I’m drawn to storytelling that feels natural. I focus on pacing,
               clean cuts, purposeful B-roll, captions, shot selection, basic sound design, and visual flow.
               My Communication training at Father Saturnino Urios University also shapes how I approach each
               project through its audience, message, and purpose&mdash;not just how it looks on screen.
@@ -374,7 +372,7 @@
               </article>
               <article>
                 <div class="tool-logo"><img src="assets/davinci-logo.webp" alt="DaVinci Resolve logo" /></div>
-                <div><strong>DaVinci Resolve</strong><small>Currently developing my workflow</small></div>
+                <div><strong>DaVinci Resolve</strong><small>Basic editing &amp; ongoing practice</small></div>
               </article>
             </div>
           </div>
@@ -389,17 +387,27 @@
         </div>
       </section>
 
-      <section class="contact-section" id="contact">
-        <div class="section-shell" data-reveal>
-          <p class="eyebrow"><span>06</span> Have a story in mind?</p>
-          <h2>Let&rsquo;s make it<br /><em>worth watching.</em></h2>
-          <div class="contact-row">
-            <a class="contact-email" href="mailto:jadephillineofficial@gmail.com?subject=Project%20inquiry%20for%20Jade">jadephillineofficial@gmail.com <span aria-hidden="true">&nearr;</span></a>
-            <div class="contact-meta">
-              <p>Bayugan City, Philippines<br />Available for remote projects</p>
-              <a href="https://www.instagram.com/jadephilline/" target="_blank" rel="noreferrer">Instagram @jadephilline</a>
-            </div>
+      <section class="contact-section" id="contact" aria-labelledby="contact-heading">
+        <div class="section-shell contact-grid">
+          <div class="contact-copy" data-reveal>
+            <p class="eyebrow"><span>06</span> Your next story starts here</p>
+            <h2 id="contact-heading">Let&rsquo;s make<br /><span>something move.</span></h2>
+            <p>Have a film, a video, or an idea in mind? Tell me what you&rsquo;re imagining.</p>
+            <a class="contact-email" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=jadephillineofficial%40gmail.com" target="_blank" rel="noopener noreferrer">jadephillineofficial@gmail.com <span aria-hidden="true">↗</span></a>
+            <div class="contact-meta"><p>Bayugan City, Philippines<br />Available for remote projects</p><a href="https://www.instagram.com/jadephilline/" target="_blank" rel="noopener noreferrer">Instagram <span aria-hidden="true">↗</span></a></div>
           </div>
+          <form class="contact-form" action="https://formsubmit.co/jadephillineofficial@gmail.com" method="POST" data-reveal>
+            <input type="hidden" name="_subject" value="New portfolio project inquiry" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_next" value="https://jadephillineportfolio.github.io/thank-you.html" />
+            <div class="form-trap" aria-hidden="true"><label>Leave this blank<input type="text" name="_honey" tabindex="-1" autocomplete="off" /></label></div>
+            <label for="client-name">Your name</label><input id="client-name" name="name" type="text" autocomplete="name" placeholder="What should I call you?" required maxlength="100" />
+            <label for="client-email">Email address</label><input id="client-email" name="email" type="email" autocomplete="email" placeholder="you@company.com" required maxlength="254" />
+            <label for="client-message">Tell me about your project</label><textarea id="client-message" name="message" rows="4" placeholder="The idea, the format, your timeline…" required minlength="10" maxlength="5000"></textarea>
+            <button class="button button-primary" type="submit">Send message <span aria-hidden="true">↗</span></button>
+            <p class="form-note">Sent to Jade via FormSubmit. A quick spam check may follow.</p>
+            <a class="form-alternative" data-email-draft href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=jadephillineofficial%40gmail.com" target="_blank" rel="noopener noreferrer">Prefer Gmail? Open an email draft ↗</a>
+          </form>
         </div>
       </section>
     </main>
@@ -410,6 +418,15 @@
         <a href="#top">Back to top &uarr;</a>
       </div>
     </footer>
+
+    <button class="assistant-launcher" type="button" aria-label="Ask about my work" aria-controls="portfolio-assistant" aria-expanded="false"><span aria-hidden="true">✦</span><span>Ask about my work</span></button>
+    <section class="assistant-panel" id="portfolio-assistant" aria-labelledby="assistant-title" hidden>
+      <header class="assistant-header"><img src="assets/jp-monogram.svg" width="38" height="38" alt="" /><div><h2 id="assistant-title">The portfolio assistant</h2><p data-assistant-status>Projects, services &amp; next steps</p></div><button type="button" class="assistant-close" aria-label="Close portfolio assistant">×</button></header>
+      <div class="assistant-messages" role="log" aria-live="polite" aria-relevant="additions" aria-label="Conversation"><div class="assistant-message"><p>Hi! Looking for an editor or a filmmaker? I can help you explore Jade’s work and find the right place to start.</p></div></div>
+      <div class="assistant-suggestions"><button type="button" data-question="What services does Jade offer?">Services</button><button type="button" data-question="Which projects should I watch?">What to watch</button><button type="button" data-question="How do I book a project?">Start a project</button></div>
+      <form class="assistant-form"><label class="sr-only" for="assistant-question">Ask about Jade’s work</label><input id="assistant-question" type="text" placeholder="Ask about my work…" autocomplete="off" maxlength="300" required /><button type="submit" aria-label="Send question">↑</button></form>
+      <p class="assistant-footnote">Answers from Jade’s portfolio · <button type="button" data-enable-ai>Enable AI matching</button></p>
+    </section>
 
     <dialog class="lightbox" data-lightbox aria-label="Artwork preview">
       <button class="lightbox-close" type="button" aria-label="Close design preview">&times;</button>

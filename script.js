@@ -42,7 +42,7 @@ const questionForm=document.querySelector('.assistant-form');
 const status=document.querySelector('[data-assistant-status]');
 const aiButton=document.querySelector('[data-enable-ai]');
 let knowledgePromise;
-const knowledge=()=>knowledgePromise ||= import('./assistant-data.js');
+const knowledge=()=>knowledgePromise ||= import('./assistant-data.js?rev=20260915-2');
 function closeAssistant(){panel.hidden=true;launcher.setAttribute('aria-expanded','false');launcher.focus({preventScroll:true});}
 launcher.addEventListener('click',()=>{const open=panel.hidden;panel.hidden=!open;launcher.setAttribute('aria-expanded',String(open));if(open){closeMenu();knowledge();questionInput.focus({preventScroll:true});}});
 document.querySelector('.assistant-close').addEventListener('click',closeAssistant);
@@ -60,7 +60,7 @@ aiButton.addEventListener('click',()=>{
  aiButton.disabled=true;aiButton.textContent='Loading AI…';status.textContent='Loading smarter matching — quick answers still work';
  appendMessage('AI matching downloads a small language model once, then finds relevant portfolio answers on your device. Your questions stay in this browser. Quick answers remain available while it loads.');
  try{
-  worker=new Worker('./assistant-worker.js',{type:'module'});
+  worker=new Worker('./assistant-worker.js?rev=20260915-2',{type:'module'});
   loadingTimer=setTimeout(aiUnavailable,90000);
   worker.onmessage=({data})=>{
    if(data.type==='ready'){clearTimeout(loadingTimer);aiReady=true;status.textContent='AI matching · Portfolio facts only';aiButton.textContent='AI enabled';return;}
@@ -70,7 +70,7 @@ aiButton.addEventListener('click',()=>{
   worker.onerror=aiUnavailable;worker.postMessage({type:'init'});
  }catch(error){aiUnavailable();}
 });
-function semanticMatch(q){return new Promise(resolve=>{const requestId=++requestNumber;const timer=setTimeout(()=>{pending.delete(requestId);resolve(null);},12000);pending.set(requestId,{resolve,timer});worker.postMessage({type:'question',question:q,requestId});});}
+function semanticMatch(q){return new Promise(resolve=>{const requestId=++requestNumber;const timer=setTimeout(()=>{pending.delete(requestId);resolve(null);},30000);pending.set(requestId,{resolve,timer});worker.postMessage({type:'question',question:q,requestId});});}
 async function ask(question){
  const q=question.trim().slice(0,300);if(!q || busy)return;
  busy=true;questionForm.querySelector('button').disabled=true;appendMessage(q,'user');questionInput.value='';

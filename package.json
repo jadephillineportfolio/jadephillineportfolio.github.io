@@ -1,1 +1,1 @@
-{"name":"jade-philline-portfolio","private":true,"type":"module","scripts":{"dev":"vite","check":"node --check script.js && node --check assistant-worker.js && node --check motion.js && node --check watch.js"},"devDependencies":{"vite":"6.1.0"}}
+{"name":"jade-philline-portfolio","private":true,"type":"module","scripts":{"dev":"vite","check":"node --check script.js && node --check motion.js && node --check watch.js"},"devDependencies":{"vite":"6.1.0"}}

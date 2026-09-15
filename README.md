@@ -18,6 +18,12 @@ Quick answers use verified portfolio facts in `assistant-data.js`. Visitors may 
 
 ## Content notes
 
-Homework is an emotional short film: sadness is conveyed through the character's gaze, the song, color grade, and ambiance. Panalangin (Prayer) concerns college puppy love in the late 1990s. My Tears Ricochet concerns infidelity and is edited to the song. These intentions were confirmed by Jade. KAPA's Writer / Director / Cinematographer / Videographer credits remain distinct from the four other projects' editing credits.
+Homework is an emotional short film: sadness is conveyed through the character's gaze, the song, color grade, and ambiance. Panalangin (Prayer) concerns college puppy love in the late 1990s. my tears ricochet concerns infidelity and is edited to the song. These intentions were confirmed by Jade. KAPA's Writer / Director / Cinematographer / Videographer credits remain distinct from the four other projects' editing credits.
 
-Fonts: Manrope via Google Fonts, with local sans-serif fallbacks. The JP mark is an SVG. Portfolio videos remain on their existing YouTube / Google Drive links. The four updated video thumbnails were extracted from the original Drive media.
+Fonts: Manrope via Google Fonts, with local sans-serif fallbacks. The custom lowercase jp mark is a native SVG, animated with CSS strokes. The four selected thumbnails use Jade's screenshots supplied on September 15, 2026, converted to WebP without changing the pictured content. The previous extracted stills remain available in the assets folder.
+
+## Signature and motion
+
+`motion.js` adds a brief arrival signature, a gradient that shifts with scroll, and image-colored backlighting on video, design, and character cards. The glow uses the actual image as its blurred background, with a sampled highlight tint. Hovering or focusing the Anna Alone poster or a character also crossfades the entire featured section to that image’s color. Keyboard focus receives the same glow; touch screens activate a softer glow as an image enters view. Reduced-motion preferences disable the arrival animation, movement, and motion effects.
+
+Video links open `watch.html?film=<key>` in a new tab using ordinary anchors. `watch.js` draws the signature, then redirects after 1.1 seconds to the film's original YouTube or Drive URL. It accepts only the fixed project list, provides an immediate direct link, skips the delay for reduced motion, and includes no-JavaScript links. It does not embed, rehost, or change access to the videos.

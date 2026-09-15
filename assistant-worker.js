@@ -1,4 +1,4 @@
-import { facts } from './assistant-data.js?rev=20260915-2';
+import { facts } from './assistant-data.js?rev=20260915-3';
 let extractor, embeddings, boot;
 const examples={
  services:['What is your area of expertise?','Can you shape my raw footage into a story?','What kind of creative work can you do?'],

@@ -21,6 +21,7 @@ if('IntersectionObserver' in window && !reducedMotion.matches){
 let lastArtwork;
 document.querySelectorAll('[data-lightbox-src]').forEach(button=>button.addEventListener('click',()=>{
  lastArtwork=button;lightboxImage.src=button.dataset.lightboxSrc;lightboxImage.alt=button.querySelector('img').alt;caption.textContent=button.dataset.lightboxTitle;
+ lightbox.style.setProperty('--lightbox-image',`url("${button.dataset.lightboxSrc}")`);
  lightbox.showModal();document.body.classList.add('overlay-open');
 }));
 function closeLightbox(){lightbox.close();}
@@ -42,14 +43,14 @@ const questionForm=document.querySelector('.assistant-form');
 const status=document.querySelector('[data-assistant-status]');
 const aiButton=document.querySelector('[data-enable-ai]');
 let knowledgePromise;
-const knowledge=()=>knowledgePromise ||= import('./assistant-data.js?rev=20260915-2');
+const knowledge=()=>knowledgePromise ||= import('./assistant-data.js?rev=20260915-3');
 function closeAssistant(){panel.hidden=true;launcher.setAttribute('aria-expanded','false');launcher.focus({preventScroll:true});}
 launcher.addEventListener('click',()=>{const open=panel.hidden;panel.hidden=!open;launcher.setAttribute('aria-expanded',String(open));if(open){closeMenu();knowledge();questionInput.focus({preventScroll:true});}});
 document.querySelector('.assistant-close').addEventListener('click',closeAssistant);
 document.addEventListener('keydown',event=>{if(event.key==='Escape'){if(!panel.hidden)closeAssistant();closeMenu();}});
 function appendMessage(text,type='assistant',fact){
  const div=document.createElement('div');div.className='assistant-message'+(type==='user'?' user':'');const p=document.createElement('p');p.textContent=text;div.append(p);
- if(fact?.link){const link=document.createElement('a');link.href=fact.link;link.textContent=fact.label+' ↗';if(fact.link.startsWith('http')){link.target='_blank';link.rel='noopener noreferrer';}else{link.addEventListener('click',closeAssistant);}div.append(link);}
+ if(fact?.link){const link=document.createElement('a');link.href=fact.link;link.textContent=fact.label+' ↗';if(!fact.link.startsWith('#')){link.target='_blank';link.rel='noopener noreferrer';}else{link.addEventListener('click',closeAssistant);}div.append(link);}
  messages.append(div);messages.scrollTop=messages.scrollHeight;return div;
 }
 let worker, aiReady=false, loadingTimer, busy=false, requestNumber=0;
@@ -60,7 +61,7 @@ aiButton.addEventListener('click',()=>{
  aiButton.disabled=true;aiButton.textContent='Loading AI…';status.textContent='Loading smarter matching — quick answers still work';
  appendMessage('AI matching downloads a small language model once, then finds relevant portfolio answers on your device. Your questions stay in this browser. Quick answers remain available while it loads.');
  try{
-  worker=new Worker('./assistant-worker.js?rev=20260915-2',{type:'module'});
+  worker=new Worker('./assistant-worker.js?rev=20260915-3',{type:'module'});
   loadingTimer=setTimeout(aiUnavailable,90000);
   worker.onmessage=({data})=>{
    if(data.type==='ready'){clearTimeout(loadingTimer);aiReady=true;status.textContent='AI matching · Portfolio facts only';aiButton.textContent='AI enabled';return;}

@@ -6,10 +6,11 @@
   let scrollFrame = 0;
 
   // Let the signature draw and settle before the homepage fades in.
-  // The CSS exit finishes at 3.35 seconds; this timer also clears the overlay.
+  // The homepage fades in for 1.8 seconds after the 2.7-second logo hold.
+  // Clear the overlay after the CSS fade finishes at 4.5 seconds.
   if (intro && !reduce.matches && performance.getEntriesByType('navigation')[0]?.type !== 'back_forward') {
     intro.hidden = false;
-    setTimeout(() => { intro.hidden = true; }, 3450);
+    setTimeout(() => { intro.hidden = true; }, 4600);
   }
   window.addEventListener('pageshow', event => { if (event.persisted && intro) intro.hidden = true; });
 

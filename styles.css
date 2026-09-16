@@ -49,7 +49,7 @@ body{isolation:isolate}
 @keyframes signature-draw{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
 @keyframes signature-dot{from{opacity:0;transform:scale(.2)}to{opacity:1;transform:scale(1)}}
 @keyframes signature-frame{from{opacity:0}to{opacity:1}}
-.brand-intro{position:fixed;inset:0;z-index:200;display:grid;place-items:center;background:radial-gradient(ellipse at 50% 48%,#15284a,#070b17 65%);animation:intro-exit .65s 2.7s forwards}
+.brand-intro{position:fixed;inset:0;z-index:200;display:grid;place-items:center;background:radial-gradient(ellipse at 50% 48%,#15284a,#070b17 65%);animation:intro-exit 1.8s ease-in-out 2.7s forwards}
 .brand-intro[hidden],.watch-direct[hidden]{display:none}
 .brand-intro-inner{display:grid;justify-items:center;text-align:center;gap:8px;padding:24px;max-width:100%}
 /* Give the arrival logo time to draw, breathe, and fade into the page. */

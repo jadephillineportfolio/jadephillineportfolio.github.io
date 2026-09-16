@@ -5,10 +5,11 @@
   const intro = document.querySelector('[data-brand-intro]');
   let scrollFrame = 0;
 
-  // A brief signature on arrival; never wait for images or block the page on a download.
+  // Let the signature draw and settle before the homepage fades in.
+  // The CSS exit finishes at 3.35 seconds; this timer also clears the overlay.
   if (intro && !reduce.matches && performance.getEntriesByType('navigation')[0]?.type !== 'back_forward') {
     intro.hidden = false;
-    setTimeout(() => { intro.hidden = true; }, 1250);
+    setTimeout(() => { intro.hidden = true; }, 3450);
   }
   window.addEventListener('pageshow', event => { if (event.persisted && intro) intro.hidden = true; });
 
